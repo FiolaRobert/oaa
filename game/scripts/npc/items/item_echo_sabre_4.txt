@@ -39,7 +39,7 @@
 		"BaseClass"                     "item_echo_sabre"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"FightRecapLevel"				"1"
-		"AbilityTextureName"            "item_echo_sabre"
+		"AbilityTextureName"            "custom/echo_sabre_4"
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.0"
@@ -99,7 +99,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_speed_slow"			"100"
+				"attack_speed_slow"			"0"
 			}
 			"09"
 			{

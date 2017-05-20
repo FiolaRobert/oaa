@@ -35,7 +35,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"236"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"            "item_dragon_lance"
+		"AbilityTextureName"            "custom/dragon_lance_1"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -56,7 +56,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"13 17 20 22"
+				"bonus_agility"			"12 16 19 21"
 			}
 			"02"
 			{

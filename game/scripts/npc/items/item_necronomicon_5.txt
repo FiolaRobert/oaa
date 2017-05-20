@@ -31,11 +31,11 @@
 		"ID"							"3170"		// unique ID
 		"BaseClass"                     "item_necronomicon_3"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityTextureName"            "item_necronomicon_3"
+		"AbilityTextureName"            "custom/necronomicon_5"
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"95.0"
+		"AbilityCooldown"				"90.0"
 		"AbilitySharedCooldown"			"necronomicon"
 		"FightRecapLevel"				"1"
 
@@ -68,7 +68,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"summon_duration"		"40"
+				"summon_duration"		"45"
 			}
 			"04"
 			{

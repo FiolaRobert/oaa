@@ -6,7 +6,6 @@ modifier_charge_replenisher = class({})
 function modifier_charge_replenisher:IsHidden()
   return true
 end
-
 function modifier_charge_replenisher:IsDebuff()
   return false
 end
@@ -20,11 +19,18 @@ function modifier_charge_replenisher:OnCreated()
   self:StartIntervalThink(0.1)
 end
 function modifier_charge_replenisher:OnRefresh()
+  if IsServer() then
+    if self.statBonusModifier and not self.statBonusModifier:IsNull() then
+      self.statBonusModifier:Destroy()
+    end
+    self.statBonusModifier = self:GetParent():AddNewModifier(self:GetCaster(), self:GetAbility(), "modifier_generic_bonus", {})
+  end
   self:StartIntervalThink(0.1)
 end
 function modifier_charge_replenisher:OnDestroy()
   if IsServer() then
     self.statBonusModifier:Destroy()
+    self.statBonusModifier = nil
   end
 end
 function modifier_charge_replenisher:OnIntervalThink()
@@ -43,7 +49,6 @@ function modifier_charge_replenisher:OnIntervalThink()
   end
   local charges = ability:GetCurrentCharges()
 
-  local ability = self:GetAbility()
   if charges < maxCharges then
     -- purely visual
     caster:AddNewModifier( caster, ability, "modifier_charge_replenishing", { duration = duration } )
